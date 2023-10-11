@@ -8,11 +8,18 @@
 import SwiftUI
 
 struct SwiftUIView: View {
+    @Binding var value : Int
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack{
+            ForEach(1..<value ) { index in
+                Text("💧")
+                
+            }
+        }
     }
-}
-
-#Preview {
-    SwiftUIView()
+    
+    
+    #Preview {
+        ContentView()
+    }
 }
